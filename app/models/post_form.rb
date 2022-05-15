@@ -1,6 +1,6 @@
 class PostForm
-  include ActiveModel::Model
-
+  include ActiveModel::Model    
+  
   attr_accessor :text, :image
 
   with_options presence: true do
@@ -11,5 +11,4 @@ class PostForm
   def save
     Post.create(text: text, image: image)
   end
-  
 end
